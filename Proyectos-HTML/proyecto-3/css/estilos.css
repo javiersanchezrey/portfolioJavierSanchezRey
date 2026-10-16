@@ -1,0 +1,344 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Montserrat', sans-serif;
+    color: #777;
+    text-align: center;
+
+    background: #23292f;
+    background-image: url('../imagenes/fondo_rayas.png');
+    background-size: 19px;
+}
+
+/*************** Estilos Generales ***************/
+a {
+    text-decoration: none; 
+}
+
+img {
+    width: 100%;
+}
+
+/*************** Menú superior ***************/
+#navegacion {
+    background-color: #13171B;
+}
+
+#navegacion a {
+    text-align: left;
+}
+
+#logo img {
+    width: 100%;
+}
+
+.separacion-menu {
+    margin-left: 40px;
+}
+
+#navegacion li a {
+    font-size: 19px;
+    font-weight: 300;
+    color: #e4e4e4;
+}
+
+#navegacion li a:hover {
+    color: #bc9f24;
+}
+
+.desplegable {
+    width: 50%;
+    border: 2px solid #fff;
+    background: #bc9f24;
+    z-index: 2000;
+    top: -3px;
+    left: 147px;
+}
+
+#navegacion .desplegable a {
+    color: #23292f;
+}
+
+#navegacion .desplegable a:hover {
+    color: #fff;
+    background-color: #bc9f24;
+}
+
+#boton-plegable {
+    margin-top: -5px;
+    margin-right: 25px;
+    border: 2px solid #bc9f24;
+    padding: 4px;
+    color: #777;
+}
+
+#navegacion .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(188, 159, 36)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/********
+******* Header *******
+********/
+
+#header {
+    padding-top: 76px;
+}
+
+#header h1 {
+    color: #fff;
+    font-size: 36px;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+#header p {
+    letter-spacing: 1px;
+    font-size: 17px;
+    margin-bottom: 56px;
+    color: #e4e4e4;
+}
+
+.botones a{
+    background: #11ABB0;
+    padding: 13px 14px 12px 14px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.botones a:hover{
+    background: #bc9f24;
+}
+
+.pulsa a{
+    background: #bc9f24;
+}
+
+.pulsa a:hover {
+    background: #11ABB0;
+}
+
+.imagen-header img {
+    margin-top: 60px;
+}
+
+/*************** Sección 2 ***************/
+#seccion-2 {
+    background-color: #c7d0e1;
+    text-align: justify;
+}
+
+.padding-seccion2 {
+    padding: 48px;
+}
+
+.separacion-columnas {
+    padding: 20px 27px;
+}
+
+.imagen-columna img:hover {
+    transform: scale(1.1);
+    transition: 1.5s;
+}
+
+#seccion-2 h2 {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: #222;
+}
+
+#seccion-2 p {
+    font-size: 15px;
+    line-height: 30px;
+    color: #838C95;
+    margin-top: 20px;
+}
+
+.separacion-texto {
+    margin-bottom: 32px;
+}
+
+/*************** Sección 3 ***************/
+#seccion-3 {
+   padding: 25px 0 50px 0;
+}
+
+.padding-seccion3 {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.viajes h1 {
+    line-height: 58px;
+    font-size: 52px;
+    font-weight: 300;
+    color: #cecece;
+    margin: 10px 0;
+}
+
+.margen-top{
+    margin-top: 25px;
+}
+
+.viajes p {
+    font-size: 20px;
+    color: #ccc;
+}
+
+.redondeado {
+    border-radius: 7px;
+    box-shadow: 2px 2px 10px #999999;
+    background-color: #2a2f3a;
+} 
+
+.imagen-viajes img {
+    border-radius: 7px 7px 0 0 ;
+}
+
+.border-derecho {
+    border-right: 1px dashed #eee;
+    padding-left: 17px;
+}
+
+.padding-comprar {
+    padding-right: 20px;
+}
+
+#seccion-3 .comprar-desde {
+    color: #cecece;
+    font-size: 10px;
+    line-height: 11px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+#seccion-3 .desde {
+    padding-top: 42px;
+}
+
+#seccion-3 .comprar-euros {
+    color: #cecece;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+#seccion-3 .comprar-euros-modificado {
+    margin-top: 0;
+}
+#seccion-3 .utilizando {
+    color: #cecece;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 500;
+}
+
+#seccion-3 .puntos {
+    color: #bc9f24;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 500;
+    margin-top: 25px;
+}
+
+h6 {
+    font-size: 18px;
+    color: #cecece;
+    padding: 15px 20px;
+    line-height: 18px;
+    border-bottom: 2px solid #eee;
+}
+
+.border-bottom {
+    border-bottom: 2px solid #eee;
+}
+.reserva {
+    border-top: 2px solid #eee;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.reserva a {
+    font-size: 16px;
+    color: #bc9f24;
+    line-height: 60px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.reserva a:hover {
+    color: #cecece;
+}
+
+.padding-puntos-1 {
+    padding: 38px 0 38px 12px;
+}
+.padding-puntos-2 {
+    padding-bottom: 44px;
+}
+
+/*************** Cajas amarillas***************/
+.amarillo {
+    margin-top: 78px;
+}
+.uno-amarillo {
+    padding: 12px;
+    border-radius: 6px 6px 6px 6px;
+    background-color: #bc9f24;
+}
+
+h3, h4 {
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 32px;
+    margin-bottom: 0;
+}
+
+h4 {
+    font-size: 20px;
+    letter-spacing: -1px;
+}
+
+#seccion-3 .uno-amarillo p {
+    font-size: 12px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.dos-amarillo {
+    margin-top: 23px;
+}
+
+/*************** Footer ***************/
+footer {
+    background-color: #181d21;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+footer h4 {
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #ddd;
+}
+h5 {
+    margin-top: 38px;
+    font-size: 14px;
+}
+
+
+/*******
+******** Página 2 ******
+*********/
+#pagina-2 h1 {
+    background: #23292f;
+    font-weight: 300;
+    font-size: 60px;
+    padding: 80px;
+    margin: 160px 0 2px 0;
+    letter-spacing: -4px;
+}

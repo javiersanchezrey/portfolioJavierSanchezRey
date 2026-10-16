@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title> Javier Sánchez Rey | Portfolio </title>
+
+  <link rel="stylesheet" href="Styles/bootstrap.min.css">
+  <link rel="stylesheet" href="Styles/styles.css">
+  <script src="scripts/scripts.js"></script>
+
+  <link rel="icon" href="img/favicon.png">
+
+</head>
+<body>
+
+  <header class="cabecera container-fluid">
+
+    <div class="barra-superior row gy-4">
+
+        <div class="col-12 col-md-5">
+          <p class="introduccion">
+            👋🏻👋🏻 Hi there! 👋🏻👋🏻 <br>
+            I'm Javier, a passionate developer with a focus on building web applications. I'm currently studying Web Application Development (DAW), coming from a strong background in Graphic Design. <br>
+            Below, you can explore my technical skillset and some of the projects I've brought to life.
+          </p>
+        </div>
+
+        <!-------- Sección de Habilidades -------->
+        <div class="col-12 col-md-7">
+            <div class="habilidades-contenedor">
+
+              <!-- Bloque 1: Diseño + Botón Contacto -->
+              <div class="columna-habilidad-grupo">
+                <div class="bloque-habilidades">
+                  <span class="titulo-habilidad"> Design </span>
+                  <div class="nombres-habilidades">
+                    <span> Figma </span>
+                    <span> Adobe XD </span>
+                    <span> Photoshop </span>
+                    <span> InDesign </span>
+                    <span> Illustrator </span>
+                  </div>
+                </div>
+                <a href="mailto:javiersanchezrey8@gmail.com" class="boton-contacto" title="Send me an email">
+                  Get in touch
+                </a>
+              </div>
+
+              <!-- Bloque 2: Desarrollo + Botón CV -->
+              <div class="columna-habilidad-grupo">
+                <div class="bloque-habilidades">
+                  <span class="titulo-habilidad"> Development </span>
+                  <div class="nombres-habilidades">
+                    <span> HTML / CSS </span>
+                    <span> Java </span>
+                    <span> Javascript / JSON </span>
+                    <span> MySQL </span>
+                    <span> Microsoft PowerBI (Beginner) </span>
+                  </div>
+                </div>
+                <a href="Javier_Sánchez_Rey.pdf" download class="boton-contacto boton-cv" title="Download my CV">
+                  Download CV
+                </a>
+              </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <h1 class="nombre-grande"> Javier Sánchez </h1>
+
+  </header>
+
+
+<!-------- Sección de Proyectos (Scroll Horizontal) -------->
+<section class="seccion-proyectos">
+  <div class="carrusel-proyectos-wrapper">
+    <div class="carrusel-pista">
+        
+        <!-------- Imagen 2 -------->
+        <div class="tarjeta-proyecto-horizontal">
+          <a href="#" class="enlace-proyecto-modal" data-proyecto="proyecto-2">
+              <figure class="bloque-imagen">
+                <img src="img/portada2.jpg" alt="Project 2">
+                <figcaption> Web Development Projects. </figcaption>
+              </figure>
+          </a>
+        </div>
+
+        <!-------- Imagen 3 -------->
+        <div class="tarjeta-proyecto-horizontal">
+            <a href="#" class="enlace-proyecto-modal" data-proyecto="proyecto-3">
+                <figure class="bloque-imagen">
+                  <img src="img/Portada3.jpg" alt="Project 3">
+                  <figcaption> Software & Apps. </figcaption>
+                </figure>
+            </a>
+        </div>
+
+        <!-------- Imagen 1 -------->
+        <div class="tarjeta-proyecto-horizontal">
+          <a href="#" class="enlace-proyecto-modal" data-proyecto="proyecto-1">
+            <figure class="bloque-imagen">
+              <img src="img/Portada1.jpg" alt="Project 1">
+              <figcaption> Packaging & Visual Identity. </figcaption>
+            </figure>
+          </a>
+        </div>
+        
+        <!-------- Imagen 4 -------->
+        <div class="tarjeta-proyecto-horizontal">
+            <a href="#" class="enlace-proyecto-modal" data-proyecto="proyecto-4">
+                <figure class="bloque-imagen">
+                  <img src="img/Portada4.jpg" alt="Graphic Design Project">
+                  <figcaption> Graphic Design & Posters. </figcaption>
+                </figure>
+            </a>
+        </div>
+
+    </div>
+  </div>
+
+<!-------- Modales / Superposiciones de Proyectos -------->
+    <div class="superposicion-modal" id="proyecto-1">
+      <button class="boton-cerrar"> Close </button>
+
+      <div class="contenido-modal">
+
+        <div class="cabecera-modal">
+          <h2> Packaging & Visual Identity </h2>
+          <p> Design of packaging, slogan, and visual identity for a Playboy condom mockup. </p>
+        </div>
+
+        <div class="galeria-imagenes">
+          <img src="img/Packaging Playboy mockup.jpg" alt="Visual identity and packaging design for Playboy condoms">
+          <img src="img/Playboy.jpg" alt="Visual identity and packaging design for Playboy condoms">
+          <img src="img/Packaging-3D-2-scaled.jpg" alt="Visual identity and packaging design for Playboy condoms">
+        </div>
+
+        <div class="cabecera-modal">
+          <p> Development of packaging, slogan, and visual identity for an emerging Beer brand mockup. </p>
+        </div>
+
+        <div class="galeria-imagenes">
+          <img src="img/Mockup_botellin_Villians_Brew.jpg" alt="Visual identity and packaging design for Villian´s Brew Beer">
+          <img src="img/Cajon_Villians_brew_Cerveza.jpg" alt="Visual identity and packaging design for Villian´s Brew Beer">
+          <img src="img/Cajon_Villians_brew_Cerveza_Parte_Trasera.jpg" alt="Visual identity and packaging design for Villian´s Brew Beer">
+        </div>
+
+        <div class="cabecera-modal">
+          <p> Development of packaging, slogan, and visual identity for an invented spanish whine called Bella Noia. </p>
+          <a href="img/Bella_Noia_Informe.pdf" download class="enlace-descarga">
+                Download more Information about Bella Noia
+              </a>
+        </div>
+
+        <div class="galeria-imagenes">
+          <img src="img/Bella_Noia_Botella_de_vino.jpg" alt="Visual identity and packaging design for Bella Noia´s Whine">
+          <img src="img/Bella_Noia_Botella_Cava.jpg" alt="Visual identity and packaging design for Bella Noia´s Whine">
+          <img src="img/Bella_Noia_etiqueta_cava1.jpg" alt="Visual identity and packaging design for Bella Noia´s Whine">
+        </div>
+
+      </div>
+    </div>
+
+    <div class="superposicion-modal" id="proyecto-2">
+      <button class="boton-cerrar">Close</button>
+
+      <div class="contenido-modal">
+        <h2> Web Design & Development </h2>
+
+        <div class="lista-items-proyecto">
+
+          <div class="item-proyecto">
+            <span class="nombre-archivo">DreamSync Project</span>
+            <p class="descripcion-proyecto"> A web application that allows users to rent their dreams. </p>
+            <div class="enlaces-proyecto">
+              <a href="./Proyectos-HTML/proyecto-DreamSync/index.html" target="_blank" class="enlace-externo">
+                View Live Demo ↗
+              </a>
+            </div>
+          </div>
+
+          <div class="item-proyecto">
+            <span class="nombre-archivo">Porsche Project</span>
+            <p class="descripcion-proyecto"> A responsive landing page inspired by the luxury automotive industry, focusing on clean layouts and high-quality visual assets. </p>
+            <div class="enlaces-proyecto">
+              <a href="./Proyectos-HTML/proyecto-Porsche/index.html" target="_blank" class="enlace-externo">
+                View Live Demo ↗
+              </a>
+              <a href="Proyectos-HTML/WEB 3 (Porsche).zip" download class="enlace-descarga">
+                Download Source Code
+              </a>
+            </div>
+          </div>
+
+          <div class="item-proyecto">
+            <span class="nombre-archivo">Web 1 (Class Project)</span>
+            <p class="descripcion-proyecto"> Responsive educational portal featuring interactive components and custom layouts. </p>
+            <div class="enlaces-proyecto">
+              <a href="./Proyectos-HTML/proyecto-3/index.html" target="_blank" class="enlace-externo">
+                View Live Demo ↗
+              </a>
+              <a href="Proyectos-HTML/WEB 1.zip" download class="enlace-descarga">
+                Download Source Code
+              </a>
+            </div>
+          </div>
+
+          <div class="item-proyecto">
+            <span class="nombre-archivo">Web 2 (Class Project)</span>
+            <p class="descripcion-proyecto"> User-centric web interface with integrated navigation and dynamic components. </p>
+            <div class="enlaces-proyecto">
+              <a href="./Proyectos-HTML/proyecto-4/index.html" target="_blank" class="enlace-externo">
+                View Live Demo ↗
+              </a>
+              <a href="Proyectos-HTML/WEB 2.zip" download class="enlace-descarga">
+                Download Source Code
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="superposicion-modal" id="proyecto-3">
+      <button class="boton-cerrar" type="button"> Close </button>
+      <div class="contenido-modal">
+        <h2> Application Development </h2>
+
+        <div class="item-proyecto">
+            <span class="nombre-archivo"> FREAKS Application </span>
+            <span class="etiqueta-tipo"> App Development </span>
+            <p class="descripcion-proyecto"> This project explores the user journey of a sneaker enthusiast, from discovery to secure checkout. Using Figma's collaborative tools, I designed a dynamic interface featuring custom grid layouts and intuitive navigation. The final prototype, refined in Adobe XD, showcases micro-interactions and smooth transitions designed to increase user retention and simplify the complex process of sneaker authentication and purchasing. </p>
+            
+            <div class="enlaces-proyecto">
+                <a href="aplicacion/Sánchez_Rey_Javier_ FREAKS.zip" download class="enlace-descarga">
+                    Download Source ⬇️
+                </a>
+            </div>
+        </div>
+
+        <div class="item-proyecto">
+            <span class="nombre-archivo"> To-Do Application </span>
+            <span class="etiqueta-tipo"> App Development </span>
+            <p class="descripcion-proyecto"> Task Management System: A JavaFX application featuring real-time productivity statistics, JSON-based data persistence, and automated weekly performance tracking. </p>
+            
+            <div class="enlaces-proyecto">
+                <a href="aplicacion/To-Do-App.zip" download class="enlace-descarga">
+                    Download Source ⬇️
+                </a>
+            </div>
+        </div>
+         
+      </div>
+    </div>
+
+    <div class="superposicion-modal" id="proyecto-4">
+      <button class="boton-cerrar"> Close </button>
+
+      <div class="contenido-modal">
+
+        <div class="cabecera-modal">
+          <h2> Graphic Design & Poster Design </h2>
+          <p> Design of packaging, slogan, and visual identity for a Playboy condom mockup. </p>
+        </div>
+
+        <div class="galeria-imagenes">
+          <img src="img/Diseno1.jpg" alt="Cartel para un concurso de narracion de Torrente Ballester">
+          <img src="img/Diseno2.jpg" alt="Cartel para un concurso de narracion de Torrente Ballester">
+          <img src="img/Diseno3.jpg" alt="Cartel para un aula de convivencia">
+          <img src="img/Diseno4.jpg" alt="Cartel para un Festival Escolar Provincial de Teatro">
+          <img src="img/Diseno5.jpg" alt="Cartel para un Festival Escolar Provincial de Teatro">
+          <img src="img/Diseno6.jpg" class="imagen-ancha" alt="Portada para un Diccionario de Historia">
+          <img src="img/Postal-de-Navidad-1.0.3-pixel.jpg" class="imagen-ancha" alt="Postal de Navidad">
+        </div>
+        
+      </div>
+    </div>
+</section>
+
+<footer>
+  <p> I hope you enjoyed my portfolio! It’s designed to give you a glimpse of my technical skills and creative approach. 😁😁. </p>
+</footer>
+
+<div id="cargador">
+  <span id="contador-cargador">0%</span>
+</div>
+
+</body>
+</html>

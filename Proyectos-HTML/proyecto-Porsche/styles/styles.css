@@ -1,0 +1,139 @@
+  /** header **/
+   header {
+      position: relative;
+      height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 30px;
+      overflow: hidden;
+    }
+    
+   .contenido-header img {
+      width: 50%;
+    }
+
+    .contenido-header h1 {
+      font-size: 50px;
+      color: #b61414c4;
+      margin: 0px;
+    }
+
+    /********** video Header ************/
+    .contenedor-video {
+      position: absolute;
+        top: 0;
+        left: 0;
+
+      width: 100%;
+        z-index: -1;
+    }
+
+    .contenedor-video video {
+      width: 100%;
+    }
+
+    /********** Container ************/
+    .container {
+      display: inline-block;
+
+      vertical-align: top;
+
+      width: 70%;
+
+      padding: 20px;
+      
+      margin: 0 auto;
+    }
+
+    .container a{  
+    text-decoration: none;
+
+    margin-top: 5px;
+    
+    color: #eee5c9;
+
+    font-weight: bold;
+    }
+ 
+    /**************** Seccion Principal *********/
+    main {
+      display: block;
+    }
+
+    /**************** Primera Noticia *********/
+
+    .noticia {
+      display: inline-block;
+
+      padding: 15px;
+
+      margin: 7px;
+    }
+
+    .noticia h2, h3{
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+    .noticia h2,h3, figcaption ,p{
+        color: #eee5c9;
+    }
+
+    .noticia img {
+      width: 100%;
+    }
+
+    .noticia > a{
+        padding-top: 15px;
+    }
+
+    .noticia a:hover{
+        border: #eee5c9 1px dotted;
+        padding: 1px;
+    }
+
+    .noticia figcaption{
+      font-size: 10px;
+      color: #f30b0bdc;
+      text-align: right;
+    }
+
+/**************** Segunda Noticia *********/
+
+    .dos-noticias {
+      width: 100%;
+    }
+    
+    .dos-noticias .noticia{
+      width: 48%;
+      vertical-align: top;
+
+      box-sizing: border-box;
+    }
+
+ /**************** Tercera Noticia *********/
+  
+    .bloque-final{
+      padding-top: 15px;
+
+    }
+    
+    .bloque-final .noticia{
+      display: inline-block;
+        width: 49%;
+
+        padding-top: 20px;
+    }
+
+    .derecha{
+      display: inline-block;
+        width: 49%;
+        padding-left: 20px;
+    }
+
+    .derecha .noticia{
+      width: 84%;
+    }

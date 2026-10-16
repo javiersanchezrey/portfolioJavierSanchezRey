@@ -1,0 +1,117 @@
+  /** header **/
+    header {
+      height: 100vh;
+
+      background-image: url('../img/historia\ Porsche\ 911.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    } 
+
+    /** Primera seccions**/
+
+    .container {
+      display: inline-block;
+
+      vertical-align: top;
+
+      width: 70%;
+
+      padding: 20px;
+      
+      margin: 0 auto;
+    }
+
+    .container a{  
+    text-decoration: none;
+
+    margin-top: 5px;
+    
+    color: #eee5c9;
+
+    font-weight: bold;
+    }
+
+
+    /** Segunda seccion **/
+
+    .segunda-seccion .noticia{
+      display: inline-block;
+    
+      width: 49%;
+    }
+
+    .segunda-seccion .derecha {
+      display: inline-block;
+      width: 49%;
+
+      vertical-align: top;
+        padding-top: 5%;
+    }
+
+    .derecha .noticia{
+      width: 99%;
+    }
+
+    .segunda-seccion .derecha p , .segunda-seccion .derecha h3, .segunda-seccion .derecha a{
+        color: #1b2215;
+    }
+
+    /** Tercera seccion **/
+
+    .bloque-final{
+      padding-top: 20px;
+
+    }
+
+    .bloque-final .noticia{
+      display: inline-block;
+      
+      width: 49%;
+    }
+
+    .derecha{
+      display: inline-block;
+        width: 49%;
+            padding-left: 50px;
+    }
+
+    .derecha .noticia{
+      width: 98%;
+    }
+
+
+  /** Noticias **/
+ .noticia {
+      display: inline-block;
+
+      padding: 15px;
+
+      margin: 7px;
+    }
+
+    .noticia h2, h3{
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+    .noticia img {
+      width: 100%;
+    }
+
+    .noticia a:hover{
+        border: #eee5c9 1px dotted;
+        padding: 1px;
+    }
+
+    .noticia figcaption{
+      font-size: 10px;
+      color: #f30b0bdc;
+      text-align: right;
+    }
+
+      /*************************** Elementos repetidos */
+    .noticia h2,h3, p{
+        color: #eee5c9;
+    }
+  /*************************** Elementos repetidos */

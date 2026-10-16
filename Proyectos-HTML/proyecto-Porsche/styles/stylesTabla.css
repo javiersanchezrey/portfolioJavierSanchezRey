@@ -1,0 +1,56 @@
+body{
+    background-image: url(../img/fondo\ Porsche.avif);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: fixed;
+}
+
+.tabla-section {
+    padding: 9% 0%;
+    
+    color: white;
+    
+    text-align: center;
+}
+
+.tabla-section h2 {
+    margin-bottom: 60px;
+    
+    color: #b61414;
+}
+
+table {
+    width: 75%;
+
+    margin: 0 auto;
+
+    border-collapse: collapse;
+        border-radius: 10px;
+  
+    background: #1a1a1a94;
+}
+
+thead {
+    background: #b61414c4;
+}
+
+thead th {
+    padding: 15px;
+  
+    font-size: 14px;
+        letter-spacing: 1px;
+}
+
+tbody td {
+    padding: 15px;
+    
+    border-bottom: 1px solid #333;
+}
+
+tbody tr:hover {
+    background: #b6141426;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
