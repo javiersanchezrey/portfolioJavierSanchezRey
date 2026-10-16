@@ -1,51 +1,51 @@
-# Javier Sánchez Rey | Portfolio Personal
+# Javier Sánchez Rey | Personal Portfolio
 
-¡Bienvenido/a al repositorio de mi portafolio personal! Este proyecto centraliza mi trayectoria, habilidades técnicas y los proyectos que he desarrollado, combinando mi experiencia en **Diseño Gráfico** con mi formación actual en **Desarrollo de Aplicaciones Web (DAW)**.
-
----
-
-## 🌐 Compatibilidad de Navegadores
-Este portfolio ha sido optimizado y probado principalmente para **Google Chrome** y **Mozilla Firefox**. 
-Para una experiencia visual y de navegación óptima, se recomienda su visualización en cualquiera de estos dos navegadores.
+Welcome to my personal portfolio repository! This project centralizes my professional background, technical skills, and the projects I have developed, combining my experience in **Graphic Design** with my current studies in **Web Application Development (DAW)**.
 
 ---
 
-## Enlaces en Vivo y Proyectos
-
-Puedes explorar las demos de mis proyectos principales directamente aquí:
-
-* **Portfolio Principal (Live Demo):** [Ver Portafolio en GitHub Pages](https://javiersanchezrey.github.io/portfolio/)
-* **DreamSync Project:** [Ver Demo en Vivo](./Proyectos-HTML/proyecto-DreamSync/index.html)
-* **Porsche Project:** [Ver Demo en Vivo](./Proyectos-HTML/proyecto-Porsche/index.html) *(Código fuente disponible en `.zip`)*
+## Browser Compatibility
+This portfolio has been optimized and tested primarily for **Google Chrome** and **Mozilla Firefox**. 
+For the best visual and navigation experience, viewing it in either of these two browsers is recommended.
 
 ---
 
-## Tecnologías y Herramientas Utilizadas
+## Live Links & Projects
 
-### **Diseño & UI/UX**
-* Figma, Adobe XD, Photoshop, InDesign, Illustrator.
+You can explore the live demos of my main projects directly here:
 
-### **Desarrollo Frontend & Tecnologías Web**
-* **HTML5 / CSS3** (Diseño adaptable, estructuración limpia y scroll horizontal fluido).
-* **JavaScript** (Gestión de interactividad, modales y control de eventos de desplazamiento).
-* **Bootstrap** (Estructura base y rejillas responsivas).
-* **Java, Spring Boot, Thymeleaf, MySQL** (Tecnologías aplicadas en proyectos de backend y aplicaciones).
+- **Main Portfolio (Live Demo):** [View Portfolio on GitHub Pages](https://javiersanchezrey.github.io/portfolio/)
+- **DreamSync Project:** [View Live Demo](./Proyectos-HTML/proyecto-DreamSync/index.html)
+- **Porsche Project:** [View Live Demo](./Proyectos-HTML/proyecto-Porsche/index.html) *(Source code available in `.zip`)*
 
 ---
 
-## Estructura del Proyecto
+## Technologies & Tools Used
 
-El repositorio está organizado en formato *monorepo* para agrupar de forma limpia la web principal y los accesos a los distintos proyectos:
+### **Design & UI/UX**
+- Figma, Adobe XD, Photoshop, InDesign, Illustrator.
+
+### **Frontend Development & Web Technologies**
+- **HTML5 / CSS3** (Responsive design, clean layout structure, and smooth horizontal scroll).
+- **JavaScript** (Interactivity management, modals, and scroll event handling).
+- **Bootstrap** (Base structure and responsive grid systems).
+- **Java, Spring Boot, Thymeleaf, MySQL** (Technologies applied in backend and application projects).
+
+---
+
+## Project Structure
+
+The repository is organized as a *monorepo* to cleanly group the main website and direct accesses to the various projects:
 
 ```text
 Portfolio/
-├── index.html              # Página principal del portafolio
-├── Styles/                 # Estilos CSS personalizados
-├── scripts/                # Lógica en JavaScript (carrusel y modales)
-├── img/                    # Recursos visuales y portadas
-├── aplicacion/             # Proyectos y prototipos descargables (.zip)
-├── CV/                     # Documentación complementaria y currículum
-└── Proyectos-HTML/         # Carpeta contenedora de los proyectos web en vivo
+├── index.html              # Main portfolio page
+├── Styles/                 # Custom CSS stylesheets
+├── scripts/                # JavaScript logic (carousel and modals)
+├── img/                    # Visual assets and covers
+├── aplicacion/             # Downloadable projects and prototypes (.zip)
+├── CV/                     # Supplementary documentation and curriculum vitae
+└── Proyectos-HTML/         # Container folder for live web projects
     ├── proyecto-DreamSync/
     ├── proyecto-Porsche/
     └── ...
@@ -53,9 +53,9 @@ Portfolio/
 
 ---
 
-## Contacto & Redes
+## Contact & Socials
 
-* **Correo Electrónico:** [javiersanchezrey8@gmail.com](mailto:javiersanchezrey8@gmail.com)
-* **Perfil de GitHub:** [github.com/javiersanchezrey](https://github.com/javiersanchezrey)
+* **Email:** [javiersanchezrey8@gmail.com](mailto:javiersanchezrey8@gmail.com)
+* **GitHub Profile:** [github.com/javiersanchezrey](https://github.com/javiersanchezrey)
 
 ---
