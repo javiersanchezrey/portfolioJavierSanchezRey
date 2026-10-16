@@ -1,139 +1,890 @@
-  /** header **/
-   header {
-      position: relative;
-      height: 100vh;
+/* 1. VARIABLES, RESETEO Y CAPA DE TEXTURA GLOBAL */
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+:root {
+  --tinta: #11110f; /* negro principal */
 
-      gap: 30px;
-      overflow: hidden;
-    }
-    
-   .contenido-header img {
-      width: 50%;
-    }
+  --crema: #f4f0e8; /* fondo claro */
 
-    .contenido-header h1 {
-      font-size: 50px;
-      color: #b61414c4;
-      margin: 0px;
-    }
+  --rojo: #f63030; /* rojo de acento */
 
-    /********** video Header ************/
-    .contenedor-video {
-      position: absolute;
-        top: 0;
-        left: 0;
+  --naranja: #ff542f; /* naranja de la sección Garage */
 
-      width: 100%;
-        z-index: -1;
-    }
+  --fuente-mono: 'DM Mono', monospace;
+  --fuente-titulos: 'Oswald', sans-serif;
+  --fuente-cuerpo: 'DM Sans', sans-serif;
+}
 
-    .contenedor-video video {
-      width: 100%;
-    }
+*{
+  box-sizing: border-box;
+}
 
-    /********** Container ************/
-    .container {
-      display: inline-block;
+html {
+  scroll-behavior: smooth;
+}
 
-      vertical-align: top;
+body {
+  margin: 0;
+  background: var(--crema);
+  color: var(--tinta);
+  font-family: var(--fuente-cuerpo);
+  overflow-x: hidden;
+}
 
-      width: 70%;
+/* Grano visual sutil superpuesto a toda la web. No bloquea clics. */
 
-      padding: 20px;
-      
-      margin: 0 auto;
-    }
+.grano {
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+  pointer-events: none;
+  opacity: .12;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E");
+}
 
-    .container a{  
-    text-decoration: none;
+/* 2. CABECERA Y NAVEGACIÓN */
 
-    margin-top: 5px;
-    
-    color: #eee5c9;
+.navegacion {
+  height: 82px;
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 3.5vw;
+  color: #fff;
+  justify-content: space-between;
+}
 
-    font-weight: bold;
-    }
- 
-    /**************** Seccion Principal *********/
-    main {
-      display: block;
-    }
+.marca {
+  font: 700 32px/1 var(--fuente-titulos);
+  letter-spacing: -1.7px;
+  color: inherit;
+  text-decoration: none;
+}
 
-    /**************** Primera Noticia *********/
+.marca span {
+  font: 10px var(--fuente-mono);
+  vertical-align: top;
+  margin-left: 2px;
+}
 
-    .noticia {
-      display: inline-block;
+.enlaces-navegacion {
+  display: flex;
+  gap: 32px;
+  margin-left: auto;
+  margin-right: 38px;
+}
 
-      padding: 15px;
+.navegacion a {
+  color: inherit;
+  text-decoration: none;
+  font: 12px var(--fuente-mono);
+  text-transform: uppercase;
+}
 
-      margin: 7px;
-    }
+.llamada-navegacion {
+  border: 1px solid currentColor;
+  padding: 11px 15px;
+}
 
-    .noticia h2, h3{
-        text-align: center;
-        padding: 20px 0px;
-    }
+.llamada-navegacion b {
+  font-size: 15px;
+  margin-left: 8px;
+}
 
-    .noticia h2,h3, figcaption ,p{
-        color: #eee5c9;
-    }
+.conmutador-menu {
+  display: none;
+}
 
-    .noticia img {
-      width: 100%;
-    }
+/* 3. PORTADA, FOTO, MARCADOR Y MARQUESINA */
 
-    .noticia > a{
-        padding-top: 15px;
-    }
+.portada {
+  height: 100svh;
+  min-height: 640px;
+  background: var(--tinta);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
 
-    .noticia a:hover{
-        border: #eee5c9 1px dotted;
-        padding: 1px;
-    }
+.texto-portada {
+  position: absolute;
+  z-index: 2;
+  top: 20%;
+  left: 7vw;
+  width: 54%;
+}
 
-    .noticia figcaption{
-      font-size: 10px;
-      color: #f30b0bdc;
-      text-align: right;
-    }
+.subtitulo {
+  font: 11px var(--fuente-mono);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin: 0;
+}
 
-/**************** Segunda Noticia *********/
+.subtitulo span {
+  display: inline-block;
+  background: currentColor;
+  width: 27px;
+  height: 1px;
+  vertical-align: middle;
+  margin-right: 9px;
+}
 
-    .dos-noticias {
-      width: 100%;
-    }
-    
-    .dos-noticias .noticia{
-      width: 48%;
-      vertical-align: top;
+.portada h1, .declaracion h2, .cabecera-seccion h2, .manifiesto h2 {
+  font: 600 clamp(76px, 12.5vw, 190px)/.8 var(--fuente-titulos);
+  letter-spacing: -.055em;
+  margin: 25px 0 24px;
+  text-transform: uppercase;
+}
 
-      box-sizing: border-box;
-    }
+.portada h1 em, .declaracion h2 em, .cabecera-seccion h2 em, .manifiesto h2 em, .llamada-accion em {
+  font-style: normal;
+  color: var(--rojo);
+}
 
- /**************** Tercera Noticia *********/
-  
-    .bloque-final{
-      padding-top: 15px;
+.introduccion-portada {
+  max-width: 285px;
+  font-size: 16px;
+  line-height: 1.3;
+  margin: 0 0 32px;
+}
 
-    }
-    
-    .bloque-final .noticia{
-      display: inline-block;
-        width: 49%;
+/* Botón circular reutilizable. La transición crea la rotación al pasar el ratón. */
 
-        padding-top: 20px;
-    }
+.enlace-circular {
+  background: var(--rojo);
+  color: var(--tinta);
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 11px;
+  text-align: center;
+  text-decoration: none;
+  font: 11px/1.1 var(--fuente-mono);
+  transition: transform .3s;
+}
 
-    .derecha{
-      display: inline-block;
-        width: 49%;
-        padding-left: 20px;
-    }
+.enlace-circular:hover {
+  transform: rotate(-12deg) scale(1.06);
+}
 
-    .derecha .noticia{
-      width: 84%;
-    }
+.enlace-circular b {
+  font: 22px var(--fuente-cuerpo);
+}
+
+.visual-portada {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 58%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Imagen de portada: se carga desde el HTML para tener texto alternativo. */
+
+.imagen-portada {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(.2,.75,.3,1);
+}
+
+/* Gradientes decorativos situados encima de la imagen de portada. */
+
+.visual-portada::after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, #11110f 0%, transparent 35%), linear-gradient(0deg, rgba(0,0,0,.4), transparent 55%);
+}
+
+.portada:hover .imagen-portada {
+  transform: scale(1.04);
+}
+
+.numero-portada {
+  position: absolute;
+  z-index: 2;
+  right: 3.5vw;
+  top: 17%;
+  font: 600 clamp(120px, 17vw, 270px)/.75 var(--fuente-titulos);
+  color: rgba(255,255,255,.16);
+  letter-spacing: -.09em;
+}
+
+.etiqueta-vertical {
+  position: absolute;
+  z-index: 2;
+  right: 18px;
+  bottom: 28px;
+  margin: 0;
+  writing-mode: vertical-rl;
+  font: 9px var(--fuente-mono);
+  letter-spacing: .09em;
+}
+
+.velocidad {
+  position: absolute;
+  z-index: 2;
+  bottom: 36px;
+  left: 16%;
+  font: 54px/.7 var(--fuente-titulos);
+}
+
+.velocidad small {
+  font: 9px var(--fuente-mono);
+  letter-spacing: .1em;
+}
+
+.marquesina {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 49px;
+  background: var(--rojo);
+  color: var(--tinta);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.marquesina div {
+  white-space: nowrap;
+  animation: desplazamiento 22s linear infinite;
+  font: 600 17px var(--fuente-titulos);
+  letter-spacing: .04em;
+}
+
+.marquesina span, .marquesina b {
+  margin-right: 34px;
+}
+
+@keyframes desplazamiento {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* 4. BLOQUE DE TEXTO Y FOTO PANORÁMICA */
+
+.declaracion {
+  min-height: 680px;
+  padding: 110px 7vw 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.declaracion h2 {
+  font-size: clamp(58px, 9.9vw, 150px);
+  margin: 45px 0;
+}
+
+.parte-inferior-declaracion {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid #bbb4a9;
+  padding-top: 19px;
+}
+
+.parte-inferior-declaracion p {
+  max-width: 355px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.enlace-texto {
+  color: var(--tinta);
+  font: 12px var(--fuente-mono);
+  text-decoration: none;
+  text-transform: uppercase;
+  border-bottom: 1px solid;
+  padding-bottom: 7px;
+}
+
+.enlace-texto b {
+  margin-left: 26px;
+}
+
+.imagen-completa {
+  height: 82vh;
+  min-height: 580px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.foto-imagen-completa {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Capa oscura decorativa que permite leer el texto sobre la imagen. */
+
+.primera-imagen::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,.38), transparent 70%);
+  pointer-events: none;
+}
+
+.pie-imagen {
+  color: #fff;
+  position: absolute;
+  left: 7vw;
+  bottom: 44px;
+  display: flex;
+  gap: 28px;
+  align-items: start;
+  z-index: 1;
+}
+
+.pie-imagen span {
+  font: 11px var(--fuente-mono);
+}
+
+.pie-imagen p {
+  font: 500 35px/.95 var(--fuente-titulos);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+
+/* 5. GARAGE: TARJETAS DE VEHÍCULOS DESPLAZABLES */
+
+.maquinas {
+  background: var(--naranja);
+  padding: 100px 0 118px;
+  overflow: hidden;
+}
+
+.cabecera-seccion {
+  padding: 0 7vw;
+  position: relative;
+}
+
+.cabecera-seccion h2 {
+  font-size: clamp(75px, 12vw, 180px);
+  margin: 32px 0 40px;
+}
+
+.cabecera-seccion h2 em {
+  color: var(--crema);
+}
+
+.cabecera-seccion > p:last-child {
+  position: absolute;
+  right: 7vw;
+  bottom: 19px;
+  font: 10px var(--fuente-mono);
+  text-transform: uppercase;
+}
+
+.rejilla-coches {
+  display: flex;
+  width: max-content;
+  gap: 17px;
+  padding-left: 7vw;
+}
+
+.tarjeta-coche {
+  width: min(31vw, 470px);
+  background: var(--crema);
+  color: var(--tinta);
+  overflow: hidden;
+}
+
+.foto-tarjeta {
+  display: block;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  transition: transform .5s;
+}
+
+.tarjeta-coche:hover .foto-tarjeta {
+  transform: scale(1.06);
+}
+
+.informacion-tarjeta {
+  padding: 22px 24px 25px;
+}
+
+.informacion-tarjeta p, .informacion-tarjeta span {
+  font: 10px var(--fuente-mono);
+  margin: 0;
+}
+
+.informacion-tarjeta h3 {
+  font: 500 52px/.85 var(--fuente-titulos);
+  letter-spacing: -.04em;
+  margin: 19px 0 24px;
+}
+
+.informacion-tarjeta span {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #bdb8ae;
+  padding-top: 13px;
+}
+
+.informacion-tarjeta b {
+  font: 19px var(--fuente-cuerpo);
+  line-height: 7px;
+}
+
+/* 6. MANIFIESTO, ESTADÍSTICAS Y LLAMADA A LA ACCIÓN */
+
+.manifiesto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 800px;
+  background: #171716;
+  color: var(--crema);
+}
+
+.imagen-manifiesto {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.texto-manifiesto {
+  padding: 12vw 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.manifiesto h2 {
+  font-size: clamp(65px, 8vw, 120px);
+  margin: 36px 0;
+  color: var(--crema);
+}
+
+.texto-manifiesto > p:not(.subtitulo) {
+  font-size: 16px;
+  line-height: 1.4;
+  max-width: 315px;
+  margin: 0 0 40px;
+}
+
+.boton-linea {
+  border: 1px solid var(--crema);
+  color: var(--crema);
+  padding: 15px 17px;
+  text-decoration: none;
+  font: 11px var(--fuente-mono);
+  text-transform: uppercase;
+  transition: .25s;
+}
+
+.boton-linea:hover {
+  background: var(--crema);
+  color: var(--tinta);
+}
+
+.boton-linea b {
+  font-size: 16px;
+  margin-left: 22px;
+}
+
+.numeros {
+  padding: 95px 7vw;
+  background: var(--rojo);
+}
+
+.numeros > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 55px;
+}
+
+.numeros article {
+  border-top: 1px solid var(--tinta);
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.numeros article + article {
+  margin-left: 20px;
+}
+
+.numeros strong {
+  font: 500 clamp(68px, 9vw, 135px)/.8 var(--fuente-titulos);
+  letter-spacing: -.07em;
+}
+
+.numeros span {
+  font: 10px/1.25 var(--fuente-mono);
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.llamada-accion {
+  height: 82vh;
+  min-height: 540px;
+  background-image: url("../img/4foto.jpg");
+  background-size: cover;
+  background-position: center;
+  color: var(--crema);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.llamada-accion > p {
+  font: 600 clamp(64px, 12vw, 180px)/.78 var(--fuente-titulos);
+  letter-spacing: -.055em;
+  text-align: center;
+  margin: 0;
+}
+
+.llamada-accion .enlace-circular {
+  position: absolute;
+  bottom: 11%;
+  right: 10%;
+}
+
+.enlace-circular.claro {
+  background: var(--crema);
+}
+
+.estrella-llamada {
+  position: absolute;
+  color: var(--naranja);
+  font-size: 190px;
+  left: -38px;
+  top: -30px;
+  animation: giros 14s linear infinite;
+}
+
+@keyframes giros {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 7. PIE DE PÁGINA Y EFECTO DE APARICIÓN AL HACER SCROLL */
+
+footer {
+  height: 120px;
+  background: var(--tinta);
+  color: var(--crema);
+  border-top: 1px solid #484843;
+  display: flex;
+  align-items: center;
+  padding: 0 3.5vw;
+  justify-content: space-between;
+}
+
+footer p, footer a {
+  font: 10px var(--fuente-mono);
+  text-transform: uppercase;
+  color: inherit;
+  text-decoration: none;
+}
+
+footer .marca {
+  font-size: 27px;
+}
+
+footer div {
+  display: flex;
+  gap: 18px;
+}
+
+.revelar {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+
+.revelar.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 8. DISEÑO RESPONSIVE */
+
+@media (max-width: 700px) {
+  .navegacion {
+    height: 68px;
+    padding: 0 20px;
+  }
+
+  .enlaces-navegacion, .llamada-navegacion {
+    display: none;
+  }
+
+  .conmutador-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 0;
+    background: none;
+    padding: 8px;
+    color: #fff;
+  }
+
+  .conmutador-menu i {
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: currentColor;
+  }
+
+  /* Menú a pantalla completa que abre el JavaScript al pulsar el icono. */
+
+  .conmutador-menu[aria-expanded=true] + .enlaces-navegacion {
+    display: flex;
+    position: absolute;
+    top: 68px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 68px);
+    background: var(--tinta);
+    flex-direction: column;
+    align-items: center;
+    padding-top: 14vh;
+    gap: 36px;
+  }
+
+  .conmutador-menu[aria-expanded=true] + .enlaces-navegacion a {
+    font: 500 44px var(--fuente-titulos);
+  }
+
+  .portada {
+    min-height: 730px;
+  }
+
+  .texto-portada {
+    top: 135px;
+    left: 22px;
+    width: calc(100% - 44px);
+  }
+
+  .portada h1 {
+    font-size: 91px;
+    margin: 19px 0;
+  }
+
+  .introduccion-portada {
+    font-size: 14px;
+    width: 180px;
+  }
+
+  .enlace-circular {
+    width: 106px;
+    height: 106px;
+    font-size: 9px;
+  }
+
+  .visual-portada {
+    width: 100%;
+    height: 54%;
+    top: auto;
+    bottom: 0;
+  }
+
+  .visual-portada::after {
+    background: linear-gradient(0deg, #11110f 2%, transparent 45%);
+  }
+
+  .numero-portada {
+    right: 17px;
+    top: 47%;
+    font-size: 130px;
+  }
+
+  .etiqueta-vertical {
+    display: none;
+  }
+
+  .velocidad {
+    bottom: 67px;
+    left: 21px;
+    font-size: 43px;
+  }
+
+  .marquesina {
+    height: 39px;
+  }
+
+  .marquesina div {
+    font-size: 14px;
+  }
+
+  .declaracion {
+    min-height: 580px;
+    padding: 75px 22px 42px;
+  }
+
+  .declaracion h2 {
+    font-size: 65px;
+    line-height: .84;
+    margin: 30px 0;
+  }
+
+  .parte-inferior-declaracion {
+    display: block;
+  }
+
+  .parte-inferior-declaracion p {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .imagen-completa {
+    min-height: 500px;
+    height: 70vh;
+  }
+
+  .pie-imagen {
+    left: 22px;
+    bottom: 26px;
+  }
+
+  .pie-imagen p {
+    font-size: 28px;
+  }
+
+  .maquinas {
+    padding: 70px 0;
+  }
+
+  .cabecera-seccion {
+    padding: 0 22px;
+  }
+
+  .cabecera-seccion h2 {
+    font-size: 78px;
+    margin: 24px 0 47px;
+  }
+
+  .cabecera-seccion > p:last-child {
+    display: none;
+  }
+
+  .rejilla-coches {
+    padding-left: 22px;
+    gap: 12px;
+  }
+
+  .tarjeta-coche {
+    width: 78vw;
+  }
+
+  .foto-tarjeta {
+    height: 295px;
+  }
+
+  .informacion-tarjeta h3 {
+    font-size: 46px;
+  }
+
+  .manifiesto {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .imagen-manifiesto {
+    height: 455px;
+  }
+
+  .texto-manifiesto {
+    padding: 70px 22px;
+  }
+
+  .manifiesto h2 {
+    font-size: 68px;
+    margin: 28px 0;
+  }
+
+  .numeros {
+    padding: 70px 22px;
+  }
+
+  .numeros > div {
+    display: block;
+    margin-top: 35px;
+  }
+
+  .numeros article {
+    padding: 15px 0;
+  }
+
+  .numeros article + article {
+    margin-left: 0;
+  }
+
+  .numeros strong {
+    font-size: 83px;
+  }
+
+  .llamada-accion {
+    height: 68vh;
+    min-height: 450px;
+  }
+
+  .llamada-accion > p {
+    font-size: 70px;
+  }
+
+  .llamada-accion .enlace-circular {
+    right: 23px;
+    bottom: 9%;
+  }
+
+  .estrella-llamada {
+    font-size: 110px;
+  }
+
+  footer {
+    height: auto;
+    padding: 32px 22px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+
+  footer p {
+    order: 3;
+    grid-column: span 2;
+    font-size: 8px;
+  }
+
+  footer div {
+    justify-content: flex-end;
+  }
+
+  .revelar {
+    transform: translateY(18px);
+  }
+}
