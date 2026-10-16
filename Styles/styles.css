@@ -15,8 +15,11 @@ body {
 .cabecera {
   min-height: 100vh;
   min-height: 100dvh;
+  
   padding: 40px;
+  
   display: flex;
+  
   flex-direction: column;
   justify-content: space-between;
 }
@@ -29,6 +32,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
+  
   align-items: start;
 }
 
@@ -43,7 +47,9 @@ body {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  
   font-size: 14px;
+  
   color: #d0d0d0;
 }
 
@@ -55,14 +61,17 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  
   line-height: 1.4;
 }
 
 .nombre-grande {
   font-size: clamp(3rem, 14vw, 13rem);
   font-weight: 500;
+  
   line-height: 1;
   letter-spacing: -5px;
+  
   white-space: nowrap;
 }
 
@@ -70,16 +79,24 @@ body {
   flex: 1;
   display: flex;
   align-items: center;
+  
   justify-content: center;
+  
   text-align: center;
   text-decoration: none;
+  
   padding: 12px 20px;
+  
   background-color: #000;
+  
   color: white;
   border: 1px solid #d0d0d0;
   border-radius: 7px;
+  
   font-size: 14px;
+  
   transition: all 0.3s ease;
+  
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -126,9 +143,13 @@ body {
 
 .carrusel-proyectos-wrapper {
   width: 100%;
+  
   overflow-x: auto;
+  
   scroll-snap-type: x mandatory;
+  
   -webkit-overflow-scrolling: touch;
+  
   padding: 0 40px 40px 40px;
 }
 
@@ -142,12 +163,14 @@ body {
 .carrusel-pista {
   display: flex;
   gap: 40px;
+  
   width: max-content;
 }
 
 .tarjeta-proyecto-horizontal {
   width: 600px;
   flex: 0 0 auto;
+  
   scroll-snap-align: start;
 }
 
@@ -163,29 +186,44 @@ body {
 .bloque-imagen img {
   width: 100%;
   height: 450px;
+  
   object-fit: cover;
+  
   display: block;
+  
   border-radius: 12px;
 }
 
 .bloque-imagen figcaption {
   margin-top: 10px;
+  
   font-size: 14px;
+  
   color: #bdbdbd;
+  
   line-height: 1.4;
 }
 
 /* Superposición / Modal de Proyectos */
 .superposicion-modal {
   position: fixed;
+  
   inset: 0;
+  
   background: rgba(14, 14, 14, 0.98);
+  
   -webkit-backdrop-filter: blur(10px);
+  
   backdrop-filter: blur(10px);
+  
   color: #fff;
+  
   z-index: 1000;
+  
   opacity: 0;
+  
   pointer-events: none;
+  
   transition: opacity 0.4s ease;
 }
 
@@ -196,25 +234,34 @@ body {
 
 .contenido-modal {
   height: 100%;
+  
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  
   padding: 100px 40px;
+  
   max-width: 1200px;
+  
   margin: 0 auto;
 }
 
 .contenido-modal img {
   width: 80%;
   max-width: 500px;
+  
   height: 270px;
+  
   border-radius: 8px;
+  
   object-fit: cover;
 }
 
 .imagen-ancha {
   width: 800px !important;
   height: auto;
+  
   object-fit: contain !important;
+  
   background: #151515;
 }
 
@@ -222,11 +269,17 @@ body {
   position: fixed;
   top: 24px;
   right: 24px;
+  
   background: #0e0e0e;
+  
   border: 1px solid #444;
+  
   color: #fff;
+  
   padding: 6px 14px;
+  
   cursor: pointer;
+  
   z-index: 1001;
 }
 
@@ -235,6 +288,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+  
   margin-bottom: 80px;
 }
 
@@ -255,8 +309,11 @@ body {
   gap: 40px;
   overflow-x: auto;
   overflow-y: hidden;
+  
   padding-bottom: 20px;
+  
   scroll-snap-type: x mandatory;
+  
   -webkit-overflow-scrolling: touch;
 }
 
@@ -267,11 +324,15 @@ body {
 .galeria-imagenes img {
   flex: 0 0 auto;
   width: 420px;
-  height: 280px;
+  height: 700px;
+  
   border-radius: 16px;
   object-fit: cover;
+  
   cursor: pointer;
+  
   scroll-snap-align: start;
+  
   transition: transform 0.4s ease;
 }
 
@@ -280,16 +341,22 @@ body {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  
   padding-bottom: 40px;
 }
 
 .item-proyecto {
   background: #151515;
+  
   padding: 32px;
+  
   border-radius: 16px;
   border: 1px solid #222;
+  
   transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+  
   text-decoration: none;
+  
   color: white;
 }
 
@@ -314,6 +381,7 @@ body {
   margin: 15px 0;
   font-size: 0.95rem;
   line-height: 1.6;
+  
   color: #cfcfcf;
 }
 
@@ -325,10 +393,15 @@ body {
 
 .enlace-externo {
   color: #fff;
+  
   text-decoration: none;
+  
   font-weight: 500;
+  
   border-bottom: 1px solid #fff;
+  
   padding-bottom: 2px;
+  
   transition: opacity 0.3s;
 }
 
@@ -339,7 +412,9 @@ body {
 .enlace-descarga {
   color: #666;
   text-decoration: none;
+  
   font-size: 0.85rem;
+  
   transition: color 0.3s;
 }
 
@@ -358,6 +433,7 @@ body {
   position: fixed;
   inset: 0;
   background: #0e0e0e;
+  
   z-index: 10000;
 }
 
@@ -365,11 +441,15 @@ body {
   position: absolute;
   right: 40px;
   bottom: 32px;
+  
   font-size: clamp(6rem, 18vw, 14rem);
   font-weight: 500;
+  
   line-height: 0.9;
   letter-spacing: -0.04em;
+  
   color: white;
+  
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
@@ -388,5 +468,6 @@ footer p {
   color: #444;
   font-size: 15px;
   text-align: center;
+  
   padding: 20px 0;
 }
