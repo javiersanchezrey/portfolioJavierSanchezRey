@@ -4,6 +4,12 @@
 
 ---
 
+## 🌐 Compatibilidad de Navegadores
+Este portfolio ha sido optimizado y probado principalmente para **Google Chrome** y **Mozilla Firefox**. 
+Para una experiencia visual y de navegación óptima, se recomienda su visualización en cualquiera de estos dos navegadores.
+
+---
+
 ## Enlaces en Vivo y Proyectos
 
 Puedes explorar las demos de mis proyectos principales directamente aquí:
