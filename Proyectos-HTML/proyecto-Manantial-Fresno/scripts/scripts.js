@@ -57,6 +57,105 @@ const lugares = {
   }
 };
 
+// Contenidos ampliados para las tarjetas de la sección 4 con imágenes y diseño zigzag
+const contenidosExperiencias = {
+  'experiencia-1': `
+    <div class="experiencia-cabecera">
+      <p class="mono">ENTORNO & GUÍA · VALLE DEL AMBROZ</p>
+      <h2>Qué ver en Hervás:<br><em>4 Lugares Imprescindibles</em></h2>
+      <p class="subtitulo">Un paraíso natural y cultural enclavado en el norte de Cáceres. Ríos, bosques de castaños y un legado histórico único para recorrer sin prisa.</p>
+    </div>
+
+    <div class="lista-lugares-guia">
+      <!-- 01: Imagen Izquierda -->
+      <div class="tarjeta-lugar-guia">
+        <div class="contenedor-imagen-lugar">
+          <img src="./img/iglesia.jpg" alt="Iglesia Santa María de Aguas Vivas">
+        </div>
+        <div class="contenido-texto-lugar">
+          <span class="numero-lugar">01</span>
+          <h3>Iglesia Santa María de Aguas Vivas</h3>
+          <p>Ubicada en la parte más alta de Hervás sobre una antigua atalaya. Ofrece un mirador panorámico impresionante sobre todo el Valle del Ambroz.</p>
+        </div>
+      </div>
+
+      <!-- 02: Imagen Derecha (Invertido) -->
+      <div class="tarjeta-lugar-guia invertido">
+        <div class="contenedor-imagen-lugar">
+          <img src="./img/barrioJudio.jpg" alt="El Barrio Judío">
+        </div>
+        <div class="contenido-texto-lugar">
+          <span class="numero-lugar">02</span>
+          <h3>El Barrio Judío (Conjunto Histórico-Artístico)</h3>
+          <p>Un laberinto de callejuelas y casas tradicionales de adobe y madera de castaño construidas entre los siglos XIV y XV. Una de las juderías mejor conservadas de España.</p>
+        </div>
+      </div>
+
+      <!-- 03: Imagen Izquierda -->
+      <div class="tarjeta-lugar-guia">
+        <div class="contenedor-imagen-lugar">
+          <img src="./img/puenteHierro.jpg" alt="El Puente de Hierro">
+        </div>
+        <div class="contenido-texto-lugar">
+          <span class="numero-lugar">03</span>
+          <h3>El Puente de Hierro</h3>
+          <p>Postal emblemática sobre el río Ambroz. Antigua vía de tren convertida en paseo con vistas panorámicas increíbles de la sierra y el pueblo.</p>
+        </div>
+      </div>
+
+      <!-- 04: Imagen Derecha (Invertido) -->
+      <div class="tarjeta-lugar-guia invertido">
+        <div class="contenedor-imagen-lugar">
+          <img src="./img/monte-hervas.jpg" alt="El Castañar Gallego de Hervás">
+        </div>
+        <div class="contenido-texto-lugar">
+          <span class="numero-lugar">04</span>
+          <h3>El Castañar Gallego de Hervás</h3>
+          <p>Espacio protegido de más de 300 hectáreas y uno de los bosques de castaños más importantes del sur de Europa. Mágico para recorrer en cualquier época, especialmente en otoño.</p>
+        </div>
+      </div>
+    </div>
+  `,
+
+
+  'experiencia-2': `
+    <div class="experiencia-cabecera">
+      <p class="mono">MOMENTO 02 · RITMO LENTO</p>
+      <h2>Quedarse cinco minutos más</h2>
+      <p class="subtitulo">Espacios diseñados para pausar el reloj, disfrutar de la luz de la mañana y reconectar con el silencio.</p>
+    </div>
+    <div class="tarjeta-lugar-guia">
+      <div class="contenedor-imagen-lugar">
+        <img src="./img/5-minutos-mas-portada2.jpg" alt="Refugio">
+      </div>
+      <div class="contenido-texto-lugar">
+        <span class="numero-lugar">REFUGIO</span>
+        <h3>Despertar sin prisas</h3>
+        <p>Nuestras casas cuentan con chimenea de leña, camas equipadas para un descanso profundo y grandes ventanales con vistas directas al jardín.</p>
+      </div>
+    </div>
+  `,
+
+  
+  'experiencia-3': `
+    <div class="experiencia-cabecera">
+      <p class="mono">MOMENTO 03 · CALMA TOTAL</p>
+      <h2>Volver a la calma</h2>
+      <p class="subtitulo">Disfruta del frescor de la naturaleza y del silencio del valle.</p>
+    </div>
+    <div class="tarjeta-lugar-guia">
+      <div class="contenedor-imagen-lugar">
+        <img src="./img/tranquilidad-portada.webp" alt="Calma">
+      </div>
+      <div class="contenido-texto-lugar">
+        <span class="numero-lugar">ENTORNO</span>
+        <h3>Agua y aire puro</h3>
+        <p>Un entorno pensado para el descanso absoluto tras una jornada explorando los senderos y pueblos del Ambroz.</p>
+      </div>
+    </div>
+  `
+};
+
 /**
  * ============================================================================
  * SCRIPT PRINCIPAL (DOM CARGADO)
@@ -200,13 +299,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const datosLugar = lugares[claveLugar];
       
       if (datosLugar) {
-        // Actualizar texto
         const elementoDescripcion = $('#descripcion-lugar');
         if (elementoDescripcion) {
           elementoDescripcion.textContent = datosLugar.texto;
         }
 
-        // Transición y cambio de la imagen
         const imagenValle = $('#foto-valle');
         if (imagenValle && datosLugar.imagen) {
           imagenValle.style.opacity = 0;
@@ -219,7 +316,36 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   });
 
-  // 5. Menú de navegación móvil
+  // 5. Modal Básico de Experiencias (Sección 4)
+  const modalExperiencia = $('#modal-experiencia');
+  const contenedorExperiencia = $('#contenedor-experiencia');
+  const botonCerrarExperiencia = $('#cerrar-modal-experiencia');    $$('.momento').forEach(tarjeta => {
+    tarjeta.onclick = () => {
+      const claveDestino = tarjeta.dataset.destino;
+      const htmlContenido = contenidosExperiencias[claveDestino];
+
+      if (htmlContenido && modalExperiencia && contenedorExperiencia) {
+        contenedorExperiencia.innerHTML = htmlContenido;
+        modalExperiencia.classList.add('abierto');
+      }
+    };
+  });
+
+  if (botonCerrarExperiencia && modalExperiencia) {
+    botonCerrarExperiencia.onclick = () => {
+      modalExperiencia.classList.remove('abierto');
+    };
+  }
+
+  if (modalExperiencia) {
+    modalExperiencia.onclick = (e) => {
+      if (e.target === modalExperiencia) {
+        modalExperiencia.classList.remove('abierto');
+      }
+    };
+  }
+
+  // 6. Menú de navegación móvil
   if ($('.boton-hamburguesa')) {$('.boton-hamburguesa').onclick = evento => {
       const menuNav = $('.menu-navegacion');
       if (menuNav) {
@@ -246,3 +372,5 @@ function mostrarToast(mensaje) {
     elementoToast.classList.remove('mostrar');
   }, 2800);
 }
+
+// CODIGO BUENO REFERENCIA
