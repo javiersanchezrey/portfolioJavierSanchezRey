@@ -762,6 +762,7 @@ footer small{
   overflow: hidden;
   position: relative;
   border: 1px solid #e2ded4;
+  cursor: zoom-in;
 }
 
 .tarjeta-foto-galeria img {
@@ -773,6 +774,42 @@ footer small{
 
 .tarjeta-foto-galeria:hover img {
   transform: scale(1.05);
+}
+
+/* Visor de foto ampliada de la galería */
+.visor-foto{
+  position:fixed;
+  inset:0;
+  background:rgba(8,39,40,.95);
+  z-index:1100;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:30px;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity .25s ease;
+}
+.visor-foto.abierto{
+  opacity:1;
+  pointer-events:auto;
+}
+.visor-foto img{
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+  box-shadow:0 20px 60px rgba(0,0,0,.5);
+}
+.visor-foto button{
+  position:absolute;
+  top:20px;
+  right:25px;
+  border:0;
+  background:none;
+  color:#fff;
+  font-size:40px;
+  line-height:1;
+  cursor:pointer;
 }
 
 /* Layout en Zigzag */
