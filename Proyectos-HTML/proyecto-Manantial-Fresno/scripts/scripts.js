@@ -26,7 +26,7 @@ const casas = {
     'La casa más amplia del Manantial, con espacio para estirar los días y las conversaciones.',
     '2 dormitorios · 1 baño · 81 m²',
     'Para viajar sin renunciar a nada.',
-    './img/Suite-Familiar-portada.jpg'
+    './img/Suite-familiar-portada.jpg'
   ],
   apartamento: [
     'El Apartamento',
