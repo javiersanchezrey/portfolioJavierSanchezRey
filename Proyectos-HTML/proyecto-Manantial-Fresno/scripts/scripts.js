@@ -1,8 +1,4 @@
-/**
- * ============================================================================
- * 1. UTILIDADES Y DATOS GLOBALES
- * ============================================================================
- */
+/* 1. UTILIDADES Y DATOS GLOBALES */
 
 const $ = selector => document.querySelector(selector);
 const $$ = selector => [...document.querySelectorAll(selector)];
@@ -203,11 +199,7 @@ const contenidosExperiencias = {
   `
 };
 
-/**
- * ============================================================================
- * SCRIPT PRINCIPAL (DOM CARGADO)
- * ============================================================================
- */
+/* 2. åSCRIPT PRINCIPAL (DOM CARGADO) */
 document.addEventListener("DOMContentLoaded", () => {
 
   // 1. Selector interactivo de alojamientos

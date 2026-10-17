@@ -15,13 +15,17 @@
     <header class="cabecera-principal">
       <a class="enlace-logo" href="#inicio">
       <span>EL</span> MANANTIAL<em>del</em>FRESNO</a>
+      
       <button class="boton-hamburguesa" aria-label="Abrir menú">☰</button>
+      
       <nav class="menu-navegacion">
         <a href="#casas">Casas</a>
         <a href="#valle">El valle</a>
         <a href="#momentos">Momentos</a>
         <a href="#contacto">Contacto</a>
+      
       </nav>
+      
       <a href="https://www.avaibook.com/reservas/nueva_reserva.php?cod_alojamiento=351488&lang=es" class="boton-reserva-pequeno js-reservar" target="_blank" rel="noopener">Reservar <b>↗</b></a>
     </header>
 
@@ -30,10 +34,12 @@
         <div class="hero-arte">
           <img src="./img/El-Manantial-del-Fresno-2.jpg.webp" alt="Zona de El Manantial del Fresno en Hervás, Cáceres" fetchpriority="high">
         </div>
+        
         <div class="hero-contenido">
           <div class="etiqueta-pastilla">
             HERVÁS <i> </i> CÁCERES <i> </i> VALLE DEL AMBROZ
           </div>
+
             <h1>Haz sitio <br> para <em>lo bueno. </em> </h1>
             <p>Diez refugios entre castaños para volver a escucharte.</p>
             <a href="#casas" class="enlace-descubrir"> Explorar el refugio <span>↓</span> </a>
@@ -44,15 +50,18 @@
             <span>01 — TU ESCAPADA</span>
             <strong>¿Cuándo te vienes?</strong>
           </div>
+
           <div class="fila-fechas">
             <label>Entrada<input type="date" id="entrada"></label>
             <span>→</span>
             <label>Salida<input type="date" id="salida"></label>
           </div>
+
           <div class="pie-creador">
             <button id="selector-huespedes">2 personas <span>＋</span></button>
             <a href="https://www.avaibook.com/reservas/nueva_reserva.php?cod_alojamiento=351488&lang=es" class="boton-comprobar" id="comprobar-estancia" target="_blank" rel="noopener">Ver opciones <b>↗</b></a>
           </div>
+
           <div id="menu-huespedes">
             <button data-huespedes="1">1 persona</button>
             <button data-huespedes="2" class="elegido">2 personas</button>
@@ -61,6 +70,7 @@
             <button data-huespedes="5">5 personas</button>
             <button data-huespedes="6">6 personas</button>
           </div>
+
         </aside>
       </section>
       
@@ -70,6 +80,7 @@
             <h2>Un lugar para cada <em>forma de escapar.</em></h2>
             <p>Casas con vida propia, preparadas para que el día no tenga prisa.</p>
           </div>
+
           <div class="explorador-casas">
             <div class="lista-casas">
               <button class="tarjeta-casa activa" data-casa="familiar">
@@ -106,45 +117,57 @@
                   <h3 id="nombre-casa">Casa Familiar</h3>
                   <p id="descripcion-casa">Dos habitaciones, un salón de sobremesas largas y un porche que da directamente al verde.</p>
                 </div>
+
                 <button class="boton-redondo" id="boton-galeria-casa" aria-label="Ver galería de imágenes">↗</button>
+
               </div>
             </article>
+
             <div class="metadatos-casa">
               <span id="detalle-casa">2 dormitorios · 1 baño · cocina completa</span>
               <span id="sensacion-casa">El punto de partida para toda la familia.</span>
             </div>
+
           </div>
       </section>
 
       <section id="valle" class="seccion-valle">
           <div class="mapa-valle">
             <img id="foto-valle" src="./img/foto-hervas.webp" alt="Vista del entorno">
+
             <div class="punto-mapa punto-uno">
               <i></i>
               <span>El Manantial</span>
             </div>
+
             <div class="punto-mapa punto-dos">
               <i></i>
               <span>Hervás</span>
             </div>
+
             <div class="punto-mapa punto-tres">
               <i></i>
               <span>Castañar</span>
             </div>
+
             <div class="contorno c1"></div>
             <div class="contorno c2"></div>
             <div class="contorno c3"></div>
+
           </div>
           <div class="contenido-valle">
             <p class="mono">03 — VALLE DEL AMBROZ</p>
             <h2>No venimos a<br>llenar el día.</h2>
             <p>Venimos a dejar hueco para que pase algo. Un paseo sin mapa, una siesta larga, una mesa que se alarga cuando cae el sol.</p>
+
             <div class="selector-lugares">
               <button class="lugar seleccionado" data-lugar="hervas">Hervás <span>8 min</span></button>
               <button class="lugar" data-lugar="forest">Castañar <span>12 min</span></button>
               <button class="lugar" data-lugar="pool">La piscina <span>0 min</span></button>
             </div>
+
             <p class="descripcion-lugar" id="descripcion-lugar">Calles de piedra, la judería y una cocina que merece hacerse despacio.</p>
+
           </div>
       </section>
 
@@ -154,43 +177,51 @@
               <p class="mono">04 — EL PLAN NO ESTÁ CERRADO</p>
               <h2>Elige lo que te<br><em>pida el cuerpo.</em></h2>
             </div>
+
             <button class="boton-sonido" id="alternar-sonido">
+
             <span>◖</span> Activar sonidos del valle</button>
           </div>
+
           <div class="rejilla-momentos">
             <div class="momento alto" data-destino="experiencia-1">
               <img src="./img/monte-hervas.jpg" alt="Montaña">
               <span>Caminar hasta perder la hora <b>↗</b></span>
             </div>
+
             <div class="momento" data-destino="experiencia-2">
               <img src="./img/5-minutos-mas-portada2.jpg" alt="Dormitorio">
               <span>Quedarse cinco minutos más <b>↗</b></span>
             </div>
+
             <div class="momento" data-destino="experiencia-3">
               <img src="./img/tranquilidad-portada.webp" alt="Interior cálido">
               <span>Volver a la calma <b>↗</b></span>
             </div>
+
           </div>
       </section>
 
       <section class="reserva-final">
-  <div class="video-fondo">
-    <iframe
-      src="https://www.youtube.com/embed/glWijhDp2XY?autoplay=1&mute=1&loop=1&playlist=glWijhDp2XY&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&iv_load_policy=3"
-      title="Video de El Manantial del Fresno"
-      frameborder="0"
-      allow="autoplay; encrypted-media"
-      referrerpolicy="strict-origin-when-cross-origin"
-      tabindex="-1"
-      aria-hidden="true"></iframe>
-  </div>
+        <div class="video-fondo">
+          <iframe
+            src="https://www.youtube.com/embed/glWijhDp2XY?autoplay=1&mute=1&loop=1&playlist=glWijhDp2XY&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&iv_load_policy=3"
+            title="Video de El Manantial del Fresno"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            referrerpolicy="strict-origin-when-cross-origin"
+            tabindex="-1"
+            aria-hidden="true"></iframe>
+        </div>
 
-  <div class="reserva-contenido">
-    <p class="mono">TU PRÓXIMA HISTORIA EMPIEZA AQUÍ</p>
-    <h2>¿Y si este fin de semana<br><em>no haces planes?</em></h2>
-    <a href="https://www.avaibook.com/reservas/nueva_reserva.php?cod_alojamiento=351488&lang=es" class="boton-grande-reserva js-reservar" target="_blank" rel="noopener">Encontrar mi refugio <b>↗</b></a>
-  </div>
-</section>
+        <div class="reserva-contenido">
+          <p class="mono">TU PRÓXIMA HISTORIA EMPIEZA AQUÍ</p>
+          <h2>¿Y si este fin de semana<br><em>no haces planes?</em></h2>
+
+          <a href="https://www.avaibook.com/reservas/nueva_reserva.php?cod_alojamiento=351488&lang=es" class="boton-grande-reserva js-reservar" target="_blank" rel="noopener">Encontrar mi refugio <b>↗</b></a>
+        </div>
+
+      </section>
     </main>
       
     <footer id="contacto">
@@ -215,9 +246,10 @@
     <!-- MODAL DE EXPERIENCIAS Y GALERÍAS -->
     <div id="modal-experiencia" class="overlay-experiencia">
       <div class="caja-modal-experiencia">
+        
         <button class="boton-cerrar-experiencia" id="cerrar-modal-experiencia" aria-label="Cerrar modal">×</button>
+
         <div class="contenido-experiencia" id="contenedor-experiencia">
-          <!-- Contenido inyectado dinámicamente -->
         </div>
       </div>
     </div>
