@@ -22,7 +22,7 @@
         <a href="#momentos">Momentos</a>
         <a href="#contacto">Contacto</a>
       </nav>
-      <button class="boton-reserva-pequeno js-reservar">Reservar <b>↗</b></button>
+      <a href="https://www.avaibook.com/reservas/nueva_reserva.php?cod_alojamiento=351488&lang=es" class="boton-reserva-pequeno js-reservar" target="_blank" rel="noopener">Reservar <b>↗</b></a>
     </header>
 
     <main id="inicio">
@@ -51,7 +51,7 @@
           </div>
           <div class="pie-creador">
             <button id="selector-huespedes">2 personas <span>＋</span></button>
-            <button class="boton-comprobar" id="comprobar-estancia">Ver opciones <b>↗</b></button>
+            <a href="https://www.avaibook.com/reservas/nueva_reserva.php?cod_alojamiento=351488&lang=es" class="boton-comprobar" id="comprobar-estancia" target="_blank" rel="noopener">Ver opciones <b>↗</b></a>
           </div>
           <div id="menu-huespedes">
             <button data-huespedes="1">1 persona</button>
@@ -99,14 +99,14 @@
             </div>
 
             <article class="escenario-casa">
-              <img id="foto-casa" src="./img/casa-Familiar-portada1.webp" alt="Interior de Casa Familiar">
+              <img id="foto-casa" src="./img/casa-Familiar-portada.webp" alt="Interior de Casa Familiar">
               <div class="capa-escenario">
                 <div>
                   <p id="etiqueta-casa" class="mono">PARA COMPARTIR</p>
                   <h3 id="nombre-casa">Casa Familiar</h3>
                   <p id="descripcion-casa">Dos habitaciones, un salón de sobremesas largas y un porche que da directamente al verde.</p>
                 </div>
-                <button class="boton-redondo js-reservar">↗</button>
+                <button class="boton-redondo" id="boton-galeria-casa" aria-label="Ver galería de imágenes">↗</button>
               </div>
             </article>
             <div class="metadatos-casa">
@@ -121,11 +121,11 @@
             <img id="foto-valle" src="./img/foto-hervas.webp" alt="Vista del entorno">
             <div class="punto-mapa punto-uno">
               <i></i>
-              <span>Hervás</span>
+              <span>El Manantial</span>
             </div>
             <div class="punto-mapa punto-dos">
               <i></i>
-              <span>Manantial del Fresno</span>
+              <span>Hervás</span>
             </div>
             <div class="punto-mapa punto-tres">
               <i></i>
@@ -135,7 +135,6 @@
             <div class="contorno c2"></div>
             <div class="contorno c3"></div>
           </div>
-
           <div class="contenido-valle">
             <p class="mono">03 — VALLE DEL AMBROZ</p>
             <h2>No venimos a<br>llenar el día.</h2>
@@ -159,26 +158,39 @@
             <span>◖</span> Activar sonidos del valle</button>
           </div>
           <div class="rejilla-momentos">
-            <button class="momento alto">
+            <div class="momento alto" data-destino="experiencia-1">
               <img src="./img/monte-hervas.jpg" alt="Montaña">
               <span>Caminar hasta perder la hora <b>↗</b></span>
-            </button>
-            <button class="momento">
+            </div>
+            <div class="momento" data-destino="experiencia-2">
               <img src="./img/5-minutos-mas-portada2.jpg" alt="Dormitorio">
               <span>Quedarse cinco minutos más <b>↗</b></span>
-            </button>
-            <button class="momento">
+            </div>
+            <div class="momento" data-destino="experiencia-3">
               <img src="./img/tranquilidad-portada.webp" alt="Interior cálido">
               <span>Volver a la calma <b>↗</b></span>
-            </button>
+            </div>
           </div>
       </section>
 
       <section class="reserva-final">
-          <p class="mono">TU PRÓXIMA HISTORIA EMPIEZA AQUÍ</p>
-          <h2>¿Y si este fin de semana<br><em>no haces planes?</em></h2>
-          <button class="boton-grande-reserva js-reservar">Encontrar mi refugio <b>↗</b> </button>
-      </section>
+  <div class="video-fondo">
+    <iframe
+      src="https://www.youtube.com/embed/glWijhDp2XY?autoplay=1&mute=1&loop=1&playlist=glWijhDp2XY&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&iv_load_policy=3"
+      title="Video de El Manantial del Fresno"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      referrerpolicy="strict-origin-when-cross-origin"
+      tabindex="-1"
+      aria-hidden="true"></iframe>
+  </div>
+
+  <div class="reserva-contenido">
+    <p class="mono">TU PRÓXIMA HISTORIA EMPIEZA AQUÍ</p>
+    <h2>¿Y si este fin de semana<br><em>no haces planes?</em></h2>
+    <a href="https://www.avaibook.com/reservas/nueva_reserva.php?cod_alojamiento=351488&lang=es" class="boton-grande-reserva js-reservar" target="_blank" rel="noopener">Encontrar mi refugio <b>↗</b></a>
+  </div>
+</section>
     </main>
       
     <footer id="contacto">
@@ -188,6 +200,7 @@
       <div>
         <p class="mono">HABLEMOS</p>
         <a href="tel:+34651923807">651 923 807</a>
+        <a href="tel:+34615500586">615 500 586</a>
         <a href="mailto:reservas@manantialdelfresno.es">reservas@manantialdelfresno.es</a>
       </div>
 
@@ -199,15 +212,15 @@
       <small>© 2026 · PRIVACIDAD · AVISO LEGAL</small>
     </footer>
 
-    <dialog id="modal-opciones">
-      <button class="boton-cerrar">×</button>
-      <p class="mono">TU ESCAPADA</p>
-      <h2 id="titulo-modal">Estamos buscando…</h2>
-      <div class="lista-opciones" id="lista-opciones"></div>
-      <p class="nota-modal">
-        Los precios son orientativos. Te confirmaremos la disponibilidad final antes de reservar.
-      </p>
-    </dialog>
+    <!-- MODAL DE EXPERIENCIAS Y GALERÍAS -->
+    <div id="modal-experiencia" class="overlay-experiencia">
+      <div class="caja-modal-experiencia">
+        <button class="boton-cerrar-experiencia" id="cerrar-modal-experiencia" aria-label="Cerrar modal">×</button>
+        <div class="contenido-experiencia" id="contenedor-experiencia">
+          <!-- Contenido inyectado dinámicamente -->
+        </div>
+      </div>
+    </div>
 
     <div id="notificacion-toast" role="status"></div>
 
