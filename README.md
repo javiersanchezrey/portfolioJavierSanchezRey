@@ -14,7 +14,7 @@ For the best visual and navigation experience, viewing it in either of these two
 
 You can explore the live demos of my main projects directly here:
 
-- **Main Portfolio (Live Demo):** [View Portfolio on GitHub Pages]([https://javiersanchezrey.github.io/portfolio/](https://javiersanchezrey.github.io/portfolioJavierSanchezRey/)
+- **Main Portfolio (Live Demo):** [View Portfolio on GitHub Pages][Main Portfolio](https://javiersanchezrey.github.io/portfolioJavierSanchezRey/)
 - **DreamSync Project:** [View Live Demo](./Proyectos-HTML/proyecto-DreamSync/index.html)
 - **Porsche Project:** [View Live Demo](./Proyectos-HTML/proyecto-Porsche/index.html) *(Source code available in `.zip`)*
 
