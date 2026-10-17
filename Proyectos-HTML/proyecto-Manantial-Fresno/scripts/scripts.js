@@ -4,7 +4,8 @@
  * ============================================================================
  */
 
-const $ = selector => document.querySelector(selector); const $$ = selector => [...document.querySelectorAll(selector)];
+const $ = selector => document.querySelector(selector);
+const $$ = selector => [...document.querySelectorAll(selector)];
 
 const casas = {
   familiar: [
@@ -38,6 +39,54 @@ const casas = {
     '1 dormitorio · 1 baño · 55 m²',
     'Para bajar el volumen a todo lo demás.',
     './img/apartamento-portada.webp'
+  ]
+};
+
+// Galerías de fotos de cada casa (cambia solo las rutas)
+const galeriasCasas = {
+  familiar: [
+    './img/casa-familiar1.webp',
+    './img/casa-familiar2.webp',
+    './img/casa-familiar3.webp',
+    './img/casa-familiar4.webp',
+    './img/casa-familiar5.webp',
+    './img/casa-familiar6.webp',
+    './img/casa-familiar7.webp'
+  ],
+  deluxe: [
+    './img/deluxe1.jpg',
+    './img/deluxe2.webp',
+    './img/deluxe3.webp',
+    './img/deluxe4.webp',
+    './img/deluxe5.webp',
+    './img/deluxe6.jpg',
+    './img/deluxe7.webp',
+    './img/deluxe8.webp',
+    './img/deluxe9.jpg'
+  ],
+  suite: [
+    './img/suite1.jpg',
+    './img/suite2.jpg',
+    './img/suite3.jpg',
+    './img/suite4.jpg',
+    './img/suite5.jpg',
+    './img/suite6.jpg',
+    './img/suite7.jpg',
+    './img/suite8.webp',
+    './img/suite9.jpg',
+    './img/suite10.jpg',
+    './img/suite11.jpg',
+    './img/suite12.webp',
+  ],
+  apartamento: [
+    './img/apartamento1.webp',
+    './img/apartamento2.webp',
+    './img/apartamento3.webp',
+    './img/apartamento4.webp',
+    './img/apartamento5.webp',
+    './img/apartamento6.webp',
+    './img/apartamento7.webp',
+    './img/apartamento8.webp'
   ]
 };
 
@@ -117,7 +166,6 @@ const contenidosExperiencias = {
     </div>
   `,
 
-
   'experiencia-2': `
     <div class="experiencia-cabecera">
       <p class="mono">MOMENTO 02 · RITMO LENTO</p>
@@ -136,7 +184,6 @@ const contenidosExperiencias = {
     </div>
   `,
 
-  
   'experiencia-3': `
     <div class="experiencia-cabecera">
       <p class="mono">MOMENTO 03 · CALMA TOTAL</p>
@@ -162,7 +209,7 @@ const contenidosExperiencias = {
  * ============================================================================
  */
 document.addEventListener("DOMContentLoaded", () => {
-  
+
   // 1. Selector interactivo de alojamientos
   const botonesCasas = $$('.tarjeta-casa');
 
@@ -170,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
     boton.onclick = () => {
       const tipoCasa = boton.dataset.casa;
       const datosCasa = casas[tipoCasa];
-      
+
       if (!datosCasa) return;
 
       botonesCasas.forEach(btn => btn.classList.remove('activa'));
@@ -211,8 +258,9 @@ document.addEventListener("DOMContentLoaded", () => {
   if (selectorHuespedes && menuHuespedes) {
     selectorHuespedes.onclick = () => menuHuespedes.classList.toggle('mostrar');
 
-    $$('#menu-huespedes button').forEach(boton => { boton.onclick = () => { $$
-('#menu-huespedes button').forEach(btn => btn.classList.remove('elegido'));
+    $$('#menu-huespedes button').forEach(boton => {
+      boton.onclick = () => {
+        $$('#menu-huespedes button').forEach(btn => btn.classList.remove('elegido'));
         boton.classList.add('elegido');
 
         const cuentaHuespedes = boton.dataset.huespedes;
@@ -271,7 +319,10 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if ($('#comprobar-estancia')) {
-    $('#comprobar-estancia').onclick = buscar; }    $$('.js-reservar').forEach(boton => {
+    $('#comprobar-estancia').onclick = buscar;
+  }
+
+  $$('.js-reservar').forEach(boton => {
     boton.onclick = () => {
       if ($('#entrada') && !$('#entrada').value) {
         const entradaPorDefecto = new Date();
@@ -287,17 +338,19 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   });
 
-  if ($('.boton-cerrar') && modalOpciones) {$('.boton-cerrar').onclick = () => modalOpciones.close();
+  if ($('.boton-cerrar') && modalOpciones) {
+    $('.boton-cerrar').onclick = () => modalOpciones.close();
   }
 
   // 4. Explorador de lugares e imágenes del entorno (Sección 3 / Valle)
-  $$('.lugar').forEach(boton => { boton.onclick = () => { $$
-('.lugar').forEach(btn => btn.classList.remove('seleccionado'));
+  $$('.lugar').forEach(boton => {
+    boton.onclick = () => {
+      $$('.lugar').forEach(btn => btn.classList.remove('seleccionado'));
       boton.classList.add('seleccionado');
-      
+
       const claveLugar = boton.dataset.lugar;
       const datosLugar = lugares[claveLugar];
-      
+
       if (datosLugar) {
         const elementoDescripcion = $('#descripcion-lugar');
         if (elementoDescripcion) {
@@ -319,7 +372,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // 5. Modal Básico de Experiencias (Sección 4)
   const modalExperiencia = $('#modal-experiencia');
   const contenedorExperiencia = $('#contenedor-experiencia');
-  const botonCerrarExperiencia = $('#cerrar-modal-experiencia');    $$('.momento').forEach(tarjeta => {
+  const botonCerrarExperiencia = $('#cerrar-modal-experiencia');
+
+  $$('.momento').forEach(tarjeta => {
     tarjeta.onclick = () => {
       const claveDestino = tarjeta.dataset.destino;
       const htmlContenido = contenidosExperiencias[claveDestino];
@@ -345,8 +400,71 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   }
 
+  // 5b. Galería de fotos de la casa (botón ↗ de la sección 2)
+  const botonGaleriaCasa = $('#boton-galeria-casa');
+
+  if (botonGaleriaCasa && modalExperiencia && contenedorExperiencia) {
+    botonGaleriaCasa.onclick = () => {
+      const casaActiva = $('.tarjeta-casa.activa');
+      const clave = casaActiva ? casaActiva.dataset.casa : 'familiar';
+      const datos = casas[clave];
+      const fotos = galeriasCasas[clave] || [];
+      if (!datos) return;
+
+      contenedorExperiencia.innerHTML = `
+        <div class="experiencia-cabecera">
+          <p class="mono">${datos[1]} · GALERÍA</p>
+          <h2>${datos[0]}</h2>
+          <p class="subtitulo">${datos[2]}</p>
+        </div>
+        <div class="rejilla-galeria-casa">
+          ${fotos.map((src, i) => `
+            <div class="tarjeta-foto-galeria">
+              <img src="${src}" alt="${datos[0]} - foto ${i + 1}" loading="lazy">
+            </div>
+          `).join('')}
+        </div>
+      `;
+
+      const caja = modalExperiencia.querySelector('.caja-modal-experiencia');
+      if (caja) caja.scrollTop = 0;
+      modalExperiencia.classList.add('abierto');
+    };
+  }
+
+  // Ampliar una foto de la galería (visor)
+  const visor = document.createElement('div');
+  visor.className = 'visor-foto';
+  visor.innerHTML = '<img alt=""><button aria-label="Cerrar foto">×</button>';
+  document.body.appendChild(visor);
+
+  const cerrarVisor = () => visor.classList.remove('abierto');
+
+  if (contenedorExperiencia) {
+    contenedorExperiencia.addEventListener('click', (e) => {
+      const foto = e.target.closest('.tarjeta-foto-galeria img');
+      if (!foto) return;
+      visor.querySelector('img').src = foto.src;
+      visor.querySelector('img').alt = foto.alt;
+      visor.classList.add('abierto');
+    });
+  }
+
+  visor.onclick = cerrarVisor;
+
+  // Tecla Esc: cierra primero el visor y, si no está abierto, el modal
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    if (visor.classList.contains('abierto')) {
+      cerrarVisor();
+    } else if (modalExperiencia) {
+      modalExperiencia.classList.remove('abierto');
+    }
+  });
+
   // 6. Menú de navegación móvil
-  if ($('.boton-hamburguesa')) {$('.boton-hamburguesa').onclick = evento => {
+  if ($('.boton-hamburguesa')) {
+    $('.boton-hamburguesa').onclick = evento => {
       const menuNav = $('.menu-navegacion');
       if (menuNav) {
         const estaAbierto = menuNav.classList.toggle('abrir');
@@ -372,5 +490,3 @@ function mostrarToast(mensaje) {
     elementoToast.classList.remove('mostrar');
   }, 2800);
 }
-
-// CODIGO BUENO REFERENCIA
