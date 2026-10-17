@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>El Manantial del Fresno</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono&amp;family=Manrope:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <header class="cabecera-principal">
+      <a class="enlace-logo" href="#inicio">
+      <span>EL</span> MANANTIAL<em>del</em>FRESNO</a>
+      <button class="boton-hamburguesa" aria-label="Abrir menú">☰</button>
+      <nav class="menu-navegacion">
+        <a href="#casas">Casas</a>
+        <a href="#valle">El valle</a>
+        <a href="#momentos">Momentos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="boton-reserva-pequeno js-reservar">Reservar <b>↗</b></button>
+    </header>
+
+    <main id="inicio">
+      <section class="seccion-hero">
+        <div class="hero-arte">
+          <img src="./img/El-Manantial-del-Fresno-2.jpg.webp" alt="Zona de El Manantial del Fresno en Hervás, Cáceres" fetchpriority="high">
+        </div>
+        <div class="hero-contenido">
+          <div class="etiqueta-pastilla">
+            HERVÁS <i> </i> CÁCERES <i> </i> VALLE DEL AMBROZ
+          </div>
+            <h1>Haz sitio <br> para <em>lo bueno. </em> </h1>
+            <p>Diez refugios entre castaños para volver a escucharte.</p>
+            <a href="#casas" class="enlace-descubrir"> Explorar el refugio <span>↓</span> </a>
+        </div>
+
+        <aside class="creador-estancia">
+          <div class="titulo-creador">
+            <span>01 — TU ESCAPADA</span>
+            <strong>¿Cuándo te vienes?</strong>
+          </div>
+          <div class="fila-fechas">
+            <label>Entrada<input type="date" id="entrada"></label>
+            <span>→</span>
+            <label>Salida<input type="date" id="salida"></label>
+          </div>
+          <div class="pie-creador">
+            <button id="selector-huespedes">2 personas <span>＋</span></button>
+            <button class="boton-comprobar" id="comprobar-estancia">Ver opciones <b>↗</b></button>
+          </div>
+          <div id="menu-huespedes">
+            <button data-huespedes="1">1 persona</button>
+            <button data-huespedes="2" class="elegido">2 personas</button>
+            <button data-huespedes="3">3 personas</button>
+            <button data-huespedes="4">4 personas</button>
+            <button data-huespedes="5">5 personas</button>
+            <button data-huespedes="6">6 personas</button>
+          </div>
+        </aside>
+      </section>
+      
+      <section id="casas" class="seccion-casas">
+          <div class="introduccion-seccion">
+            <p class="mono">02 — ELIGE TU RITMO</p>
+            <h2>Un lugar para cada <em>forma de escapar.</em></h2>
+            <p>Casas con vida propia, preparadas para que el día no tenga prisa.</p>
+          </div>
+          <div class="explorador-casas">
+            <div class="lista-casas">
+              <button class="tarjeta-casa activa" data-casa="familiar">
+              <span>01</span>
+              <strong>Casa Familiar</strong>
+              <small>66 m² · 4 personas</small>
+              <b>↗</b>
+              </button>
+              <button class="tarjeta-casa" data-casa="deluxe">
+              <span>02</span>
+              <strong>Deluxe Familiar</strong>
+              <small>68 m² · 4 personas</small>
+              <b>↗</b>
+              </button>
+              <button class="tarjeta-casa" data-casa="suite">
+              <span>03</span>
+              <strong>Suite Familiar</strong>
+              <small>81 m² · 4 personas</small>
+              <b>↗</b>
+              </button>
+              <button class="tarjeta-casa" data-casa="apartamento">
+              <span>04</span>
+              <strong>El Apartamento</strong>
+              <small>55 m² · 2 personas</small>
+              <b>↗</b>
+              </button>
+            </div>
+
+            <article class="escenario-casa">
+              <img id="foto-casa" src="./img/casa-Familiar-portada1.webp" alt="Interior de Casa Familiar">
+              <div class="capa-escenario">
+                <div>
+                  <p id="etiqueta-casa" class="mono">PARA COMPARTIR</p>
+                  <h3 id="nombre-casa">Casa Familiar</h3>
+                  <p id="descripcion-casa">Dos habitaciones, un salón de sobremesas largas y un porche que da directamente al verde.</p>
+                </div>
+                <button class="boton-redondo js-reservar">↗</button>
+              </div>
+            </article>
+            <div class="metadatos-casa">
+              <span id="detalle-casa">2 dormitorios · 1 baño · cocina completa</span>
+              <span id="sensacion-casa">El punto de partida para toda la familia.</span>
+            </div>
+          </div>
+      </section>
+
+      <section id="valle" class="seccion-valle">
+          <div class="mapa-valle">
+            <img id="foto-valle" src="./img/foto-hervas.webp" alt="Vista del entorno">
+            <div class="punto-mapa punto-uno">
+              <i></i>
+              <span>Hervás</span>
+            </div>
+            <div class="punto-mapa punto-dos">
+              <i></i>
+              <span>Manantial del Fresno</span>
+            </div>
+            <div class="punto-mapa punto-tres">
+              <i></i>
+              <span>Castañar</span>
+            </div>
+            <div class="contorno c1"></div>
+            <div class="contorno c2"></div>
+            <div class="contorno c3"></div>
+          </div>
+
+          <div class="contenido-valle">
+            <p class="mono">03 — VALLE DEL AMBROZ</p>
+            <h2>No venimos a<br>llenar el día.</h2>
+            <p>Venimos a dejar hueco para que pase algo. Un paseo sin mapa, una siesta larga, una mesa que se alarga cuando cae el sol.</p>
+            <div class="selector-lugares">
+              <button class="lugar seleccionado" data-lugar="hervas">Hervás <span>8 min</span></button>
+              <button class="lugar" data-lugar="forest">Castañar <span>12 min</span></button>
+              <button class="lugar" data-lugar="pool">La piscina <span>0 min</span></button>
+            </div>
+            <p class="descripcion-lugar" id="descripcion-lugar">Calles de piedra, la judería y una cocina que merece hacerse despacio.</p>
+          </div>
+      </section>
+
+      <section id="momentos" class="seccion-momentos">
+          <div class="cabecera-momentos">
+            <div>
+              <p class="mono">04 — EL PLAN NO ESTÁ CERRADO</p>
+              <h2>Elige lo que te<br><em>pida el cuerpo.</em></h2>
+            </div>
+            <button class="boton-sonido" id="alternar-sonido">
+            <span>◖</span> Activar sonidos del valle</button>
+          </div>
+          <div class="rejilla-momentos">
+            <button class="momento alto">
+              <img src="./img/monte-hervas.jpg" alt="Montaña">
+              <span>Caminar hasta perder la hora <b>↗</b></span>
+            </button>
+            <button class="momento">
+              <img src="./img/5-minutos-mas-portada2.jpg" alt="Dormitorio">
+              <span>Quedarse cinco minutos más <b>↗</b></span>
+            </button>
+            <button class="momento">
+              <img src="./img/tranquilidad-portada.webp" alt="Interior cálido">
+              <span>Volver a la calma <b>↗</b></span>
+            </button>
+          </div>
+      </section>
+
+      <section class="reserva-final">
+          <p class="mono">TU PRÓXIMA HISTORIA EMPIEZA AQUÍ</p>
+          <h2>¿Y si este fin de semana<br><em>no haces planes?</em></h2>
+          <button class="boton-grande-reserva js-reservar">Encontrar mi refugio <b>↗</b> </button>
+      </section>
+    </main>
+      
+    <footer id="contacto">
+      <a class="enlace-logo" href="#inicio">
+      <span>EL</span> MANANTIAL<em>del</em>FRESNO</a>
+
+      <div>
+        <p class="mono">HABLEMOS</p>
+        <a href="tel:+34651923807">651 923 807</a>
+        <a href="mailto:reservas@manantialdelfresno.es">reservas@manantialdelfresno.es</a>
+      </div>
+
+      <div>
+        <p class="mono">ENCUÉNTRANOS</p>
+        <p>Hervás, Cáceres<br>Valle del Ambroz</p>
+      </div>
+
+      <small>© 2026 · PRIVACIDAD · AVISO LEGAL</small>
+    </footer>
+
+    <dialog id="modal-opciones">
+      <button class="boton-cerrar">×</button>
+      <p class="mono">TU ESCAPADA</p>
+      <h2 id="titulo-modal">Estamos buscando…</h2>
+      <div class="lista-opciones" id="lista-opciones"></div>
+      <p class="nota-modal">
+        Los precios son orientativos. Te confirmaremos la disponibilidad final antes de reservar.
+      </p>
+    </dialog>
+
+    <div id="notificacion-toast" role="status"></div>
+
+    <script src="scripts/scripts.js" defer></script>
+</body>
+</html>
